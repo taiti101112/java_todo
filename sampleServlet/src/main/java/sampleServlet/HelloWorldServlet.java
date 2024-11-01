@@ -20,7 +20,7 @@ public class HelloWorldServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 
-		response.getWriter().println("<html><body><h1>Hello, joyworks</h1></body></html>");
+		response.getWriter().println("<html><body><h1>Hello, joyworksです</h1></body></html>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,4 +28,3 @@ public class HelloWorldServlet extends HttpServlet {
 	}
 
 }
-
