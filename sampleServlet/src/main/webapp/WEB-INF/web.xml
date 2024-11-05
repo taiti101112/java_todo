@@ -9,4 +9,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>FormHandlerServlet</display-name>
+    <servlet-name>FormHandlerServlet</servlet-name>
+    <servlet-class>sampleServlet.FormHandlerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FormHandlerServlet</servlet-name>
+    <url-pattern>/FormHandlerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SessionServlet</display-name>
+    <servlet-name>SessionServlet</servlet-name>
+    <servlet-class>sampleServlet.SessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionServlet</servlet-name>
+    <url-pattern>/SessionServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
