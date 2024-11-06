@@ -34,10 +34,7 @@ public class SessionServlet extends HttpServlet {
     out.println("<title>注文画面</title>");
     out.println("</head><body>");
     out.println("<h2>商品を選択してください</h2>");
-
-    // 修正した部分
     out.println("<form action=\"" + req.getContextPath() + "/session\" method=\"post\">");
-
     out.println("<select name=\"book\" size=\"1\">");
     out.println("<option value=\"超絶わかるJava\">超絶わかるJava</option>");
     out.println("<option value=\"小学生からはじめるJava\">小学生からはじめるJava</option>");
