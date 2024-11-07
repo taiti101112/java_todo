@@ -29,4 +29,10 @@
     <servlet-name>SessionServlet</servlet-name>
     <url-pattern>/SessionServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>form3</display-name>
+    <servlet-name>form3</servlet-name>
+    <servlet-class>sampleServlet.form3</servlet-class>
+  </servlet>
 </web-app>
