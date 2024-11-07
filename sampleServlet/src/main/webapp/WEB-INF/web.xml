@@ -35,4 +35,14 @@
     <servlet-name>form3</servlet-name>
     <servlet-class>sampleServlet.form3</servlet-class>
   </servlet>
+  <servlet>
+    <description></description>
+    <display-name>RegisterServlet4</display-name>
+    <servlet-name>RegisterServlet4</servlet-name>
+    <servlet-class>sampleServlet.RegisterServlet4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet4</servlet-name>
+    <url-pattern>/RegisterServlet4</url-pattern>
+  </servlet-mapping>
 </web-app>
