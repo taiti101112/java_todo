@@ -5,9 +5,6 @@ public class ToDo {
 	private String task;
 	private boolean completed;
 	
-	public ToDo() {
-		
-	}
 	
 	public ToDo(int id, String task) {
 		this.id = id;
