@@ -15,7 +15,6 @@
 	</form>
 	<ul>
 		<%
-			// タスクリストを取得
 			java.util.List<sampleServlet.ToDo> tasks = toDoList.getTasks();
 			for (sampleServlet.ToDo task : tasks) {
 		%>
