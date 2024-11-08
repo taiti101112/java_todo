@@ -45,4 +45,24 @@
     <servlet-name>RegisterServlet4</servlet-name>
     <url-pattern>/RegisterServlet4</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ToDoController</display-name>
+    <servlet-name>ToDoController</servlet-name>
+    <servlet-class>sampleServlet.ToDoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ToDoController</servlet-name>
+    <url-pattern>/ToDoController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ToDoServlet</display-name>
+    <servlet-name>ToDoServlet</servlet-name>
+    <servlet-class>sampleServlet.ToDoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ToDoServlet</servlet-name>
+    <url-pattern>/ToDoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
