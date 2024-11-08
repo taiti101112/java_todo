@@ -10,30 +10,32 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/todo")
 public class ToDoController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ToDoController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	private ToDoList toDoList = new ToDoList();
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	    req.setCharacterEncoding("UTF-8");
+	    res.setContentType("text/html; charset=UTF-8");
+	    
+	    // ToDoListオブジェクトをリクエストスコープに設定
+		req.setAttribute("toDoList", toDoList);
+		req.getRequestDispatcher("/todo.jsp").forward(req, res);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	    req.setCharacterEncoding("UTF-8"); 
+	    res.setContentType("text/html; charset=UTF-8");
+	    		
+		String action = req.getParameter("action");
+		if ("add".equals(action)) {
+			String task = req.getParameter("task");
+			toDoList.addTask(task);
+		} else if ("toggle".equals(action)) {
+			int id = Integer.parseInt(req.getParameter("id"));
+			toDoList.toggleTask(id);
+		} else if ("delete".equals(action)) {
+			int id = Integer.parseInt(req.getParameter("id"));
+			toDoList.deleteTask(id);
+		}
+		res.sendRedirect("todo");
 	}
-
 }
