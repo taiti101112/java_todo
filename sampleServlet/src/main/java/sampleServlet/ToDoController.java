@@ -16,7 +16,6 @@ public class ToDoController extends HttpServlet {
 	    req.setCharacterEncoding("UTF-8");
 	    res.setContentType("text/html; charset=UTF-8");
 	    
-	    // ToDoListオブジェクトをリクエストスコープに設定
 		req.setAttribute("toDoList", toDoList);
 		req.getRequestDispatcher("/todo.jsp").forward(req, res);
 	}
