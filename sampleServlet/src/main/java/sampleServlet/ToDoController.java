@@ -1,15 +1,14 @@
 package sampleServlet;
 
+import java.io.IOException;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
-/**
- * Servlet implementation class ToDoController
- */
+@WebServlet("/todo")
 public class ToDoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
