@@ -22,7 +22,7 @@
 				<form action="todo" method="post" style="display:inline">
 					<input type="hidden" name="id" value="<%= task.getId() %>">
 					<button type="submit" name="action" value="toggle">
-						<%= task.getCompleted() ? "未完了" : "完了" %>
+						<%= task.getCompleted() ? "完了済み" : "完了" %>
 					</button>
 				</form>
 				<form action="todo" method="post" style="display:inline">
