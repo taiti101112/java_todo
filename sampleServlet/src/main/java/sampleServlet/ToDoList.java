@@ -24,7 +24,7 @@ import java.util.List;
 public class ToDoList {
 	private int currentId = 0;
 	
-	// 現在のtaskオブジェクトの一番大きいIDから+1した数を取得して、それを新しく作成したオブジェクトのIDにする
+	// 現在のtaskオブジェクトの一番大きいIDから+1した数を取得して、それを新しく作成したtaskオブジェクトのIDにする
 	public ToDoList() {
 		try(Connection conn = DatabaseInitializer.getConnection();
 			Statement stmt = conn.createStatement()){
@@ -95,40 +95,3 @@ public class ToDoList {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
