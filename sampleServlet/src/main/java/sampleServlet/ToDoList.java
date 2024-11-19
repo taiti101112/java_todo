@@ -30,7 +30,7 @@ public class ToDoList {
 			Statement stmt = conn.createStatement()){
 			ResultSet rs = stmt.executeQuery("SELECT MAX(id) AS max_id FROM todo");
 			if(rs.next()) {
-				currentId = rs.getInt("max_id") + 1;
+				currentId = rs.getInt("max_id");
 			}
 		} catch(SQLException e) {
 			e.printStackTrace();
