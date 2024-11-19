@@ -18,6 +18,7 @@
 			java.util.List<sampleServlet.ToDo> tasks = toDoList.getTasks();
 			for (sampleServlet.ToDo task : tasks) {
 		%>
+		
 			<li>
 				<form action="todo" method="post" style="display:inline">
 					<input type="hidden" name="id" value="<%= task.getId() %>">
